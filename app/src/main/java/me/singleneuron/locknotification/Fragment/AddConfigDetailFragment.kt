@@ -43,8 +43,12 @@ class AddConfigDetailFragment : PreferenceFragmentCompat() {
             MaterialAlertDialogBuilder(requireContext())
                 .setView(editText)
                 .setPositiveButton(R.string.OK) { _, _ ->
-                    configUtil = ConfigUtil.fromJson(editText.text.toString())
-                    init()
+                    try {
+                        configUtil = ConfigUtil.fromJson(editText.text.toString())
+                        init()
+                    } catch (e:Exception) {
+                        Toast.makeText(requireContext(),e.toString(),Toast.LENGTH_LONG).show()
+                    }
                 }
                 .setNegativeButton(R.string.cancel,null)
                 .create()
