@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="me.singleneuron.locknotification">
+
+    <application
+        android:allowBackup="false"
+        android:hasFragileUserData="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/googleBlue"
+        tools:targetApi="q">
+        <service
+            android:name=".NotificationListener"
+            android:label="@string/notification_listener"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/googleBlue">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BackgroundActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:theme="@style/noDisplay" />
+
+        <provider
+            android:name=".ContentProvider"
+            android:authorities="me.singleneuron.locknotification.provider"
+            android:directBootAware="true"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <service android:enabled="true"
+            android:name=".NevolutionService"
+            android:directBootAware="true"
+            android:permission="com.oasisfeng.nevo.permission.BIND_DECORATOR_SERVICE"
+            android:process="com.oasisfeng.nevo.decorators"
+            android:label="@string/app_name"
+            android:description="@string/description" >
+            <intent-filter android:priority="0">
+                <action android:name="com.oasisfeng.nevo.Decorator" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".NevolutionReceiver"
+            android:permission="com.oasisfeng.nevo.permission.BIND_DECORATOR_SERVICE"
+            android:exported="true" />
+
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="@string/description" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="82" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+    </application>
+
+</manifest>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">鎖定通知</string>
+    <string name="xposed_not_activated">Xposed 未啟用</string>
+    <string name="nevolution">女媧石</string>
+    <string name="already_apply_count">已應用 %1$d 次</string>
+    <string name="notification_not_allowed">通知使用權 未授予</string>
+    <string name="notification_service_not_connect">未連線到通知監聽服務</string>
+    <string name="rule">規則</string>
+    <string name="name">名稱</string>
+    <string name="enable">啟用</string>
+    <string name="import_rule">匯入</string>
+    <string name="filter">過濾</string>
+    <string name="use_regex">使用正則表示式</string>
+    <string name="package_name">包名</string>
+    <string name="title">標題</string>
+    <string name="message">內容</string>
+    <string name="notification_channel">通知渠道</string>
+    <string name="style">風格</string>
+    <string name="action">操作</string>
+    <string name="lock">鎖定</string>
+    <string name="add_to_another_channel">新增到單獨的通知渠道</string>
+    <string name="channel_name">渠道名稱</string>
+    <string name="channel_id">渠道ID</string>
+    <string name="importance">重要性</string>
+    <string name="lockscreen_visibility">鎖屏可見性</string>
+    <string name="all_rules">所有規則</string>
+    <string name="setting">設定</string>
+    <string name="force_night_style">強制使用暗色主題</string>
+    <string name="auto_start_permission">自啟動許可權</string>
+    <string name="auto_start_permission_summary">如果您在使用中國大陸的系統或後臺管理軟體，請允許本模組自啟及被喚醒。</string>
+    <string name="recheck_summary">請在更新後重新勾選模組並重啟手機</string>
+    <string name="recheck">更新後Xposed未啟用</string>
+    <string name="edxposed_problem">EdXposed 問題反饋注意事項</string>
+    <string name="taichi_problem">如果EdXposed/Xposed等使用者報告此模組工作正常但不在您的太極上工作。很大可能是太極的適配引擎又出現了問題/壓根就沒支援</string>
+    <string name="taichi">太極</string>
+    <string name="troubleshooting">故障排除</string>
+    <string name="special_thanks">特別感謝</string>
+    <string name="special_thanks_summary">本模組使用者介面完全厚顏無恥的抄襲了原生音樂通知，感謝此模組的作者dalao\n感謝賣動繪製圖標</string>
+    <string name="about">關於</string>
+    <string name="singleNeuron">神經元</string>
+    <string name="author">作者</string>
+    <string name="version">版本</string>
+    <string name="contact_author">聯絡作者</string>
+    <string name="qq_group">加入QQ群</string>
+    <string name="telegram_channel">Telegram頻道/群組</string>
+    <string name="github_address">專案地址</string>
+    <string name="open_source_license">開放原始碼許可</string>
+    <string name="showing_notification">正在顯示的通知</string>
+    <string name="OK">確定</string>
+    <string name="cancel">取消</string>
+    <string name="only_letters_and_numbers">\" 只能包含英文字母或數字\"</string>
+    <string name="id_should_not_empty">ID不能為空</string>
+    <string name="channel_id_should_not_empty">Channel ID不能為空</string>
+    <string name="channel_importance_should_not_empty">Channel重要性不能為空</string>
+    <string name="edit">編輯</string>
+    <string name="delete">刪除</string>
+    <string name="copy1">複製</string>
+    <string name="ask_delete">刪除?</string>
+    <string name="already_copy_to_clipbroad">已複製到剪貼簿</string>
+    <string name="clean_all_log">清除所有日誌</string>
+    <string name="max_remain">最大保留條數</string>
+    <string name="nevolution_activated">女媧石 已啟用</string>
+    <string name="nevolution_not_activated">女媧石 未啟用</string>
+    <string name="nevolution_not_install">女媧石 未安裝</string>
+    <string name="now_showing_count">當前正在顯示 %1$d 條通知</string>
+    <string name="notification_allowed">通知使用權 已授予</string>
+    <string name="xposedmusicnotify">原生音樂通知</string>
+    <string name="send_email">傳送郵件</string>
+    <string name="xposed_activated">Xposed 已啟用</string>
+    <string name="edxposed_not_activated">EdXposed 未啟用</string>
+    <string name="edxposed_activated">EdXposed 已啟用</string>
+    <string name="taichi_yin_not_activated">太極·陰 未啟用</string>
+    <string name="taichi_yin_activated">太極·陰 已啟用</string>
+    <string name="taichi_yang_not_activated">太極·陽 未啟用</string>
+    <string name="taichi_yang_activated">太極·陽 已啟用</string>
+    <string name="notification_listener">鎖定通知-通知監聽器</string>
+    <string-array name="notificationStyle">
+        <item>大圖片</item>
+        <item>一大段文字</item>
+        <item>收件箱</item>
+        <item>對話</item>
+        <item>媒體</item>
+    </string-array>
+    <string-array name="notificationImportance">
+        <item>緊急</item>
+        <item>高</item>
+        <item>中</item>
+        <item>低</item>
+    </string-array>
+    <string-array name="notificationVisibility">
+        <item>不更改</item>
+        <item>不顯示敏感內容</item>
+        <item>完全不顯示</item>
+    </string-array>
+</resources>

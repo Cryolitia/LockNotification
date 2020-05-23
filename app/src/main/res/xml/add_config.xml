@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/rule" >
+
+        <androidx.preference.EditTextPreference
+            android:title="@string/name"
+            android:key="configName" />
+
+        <androidx.preference.EditTextPreference
+            android:title="ID"
+            android:key="configKey" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:title="@string/enable"
+            android:key="enable"
+            android:defaultValue="true" />
+
+        <androidx.preference.Preference
+            android:title="@string/import_rule"
+            android:key="import" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/filter">
+
+        <androidx.preference.CheckBoxPreference
+            android:title="@string/use_regex"
+            android:key="useRegex"
+            app:defaultValue="false" />
+
+        <androidx.preference.EditTextPreference
+            android:title="@string/package_name"
+            android:key="usePackage" />
+
+        <androidx.preference.EditTextPreference
+            android:title="@string/title"
+            android:key="useTitle" />
+
+        <androidx.preference.EditTextPreference
+            android:title="@string/message"
+            android:key="useMessage" />
+
+        <androidx.preference.EditTextPreference
+            android:title="@string/notification_channel"
+            android:key="useChannel" />
+
+        <androidx.preference.MultiSelectListPreference
+            android:title="@string/style"
+            android:key="useStyle"
+            android:entries="@array/notificationStyle"
+            android:entryValues="@array/notificationStyleValue" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/action" >
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:title="@string/lock"
+            android:key="lockNotification" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:title="@string/add_to_another_channel"
+            android:key="throwInAnotherChannel" />
+
+        <androidx.preference.EditTextPreference
+            android:title="@string/channel_name"
+            android:key="channelTitle"
+            android:dependency="throwInAnotherChannel" />
+
+        <androidx.preference.EditTextPreference
+            android:title="@string/channel_id"
+            android:key="channelKey"
+            android:dependency="throwInAnotherChannel"/>
+
+        <androidx.preference.DropDownPreference
+            android:title="@string/importance"
+            android:key="channelImportance"
+            android:dependency="throwInAnotherChannel"
+            android:entries="@array/notificationImportance"
+            android:entryValues="@array/notificationImportanceValue" />
+
+        <androidx.preference.DropDownPreference
+            android:title="@string/lockscreen_visibility"
+            android:key="visibility"
+            android:entries="@array/notificationVisibility"
+            android:entryValues="@array/notificationVisibilityValue" />
+
+    </androidx.preference.PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

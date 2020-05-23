@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomCardView">
+        <attr name="customTitle" format="string" />
+        <attr name="customSummary" format="string" />
+    </declare-styleable>
+</resources>

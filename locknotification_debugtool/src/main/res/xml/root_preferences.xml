@@ -1,0 +1,53 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Notification" >
+        <EditTextPreference
+            android:title="Title"
+            android:key="title" />
+
+        <EditTextPreference
+            android:title="Text"
+            android:key="text" />
+
+        <EditTextPreference
+            android:title="ChannelId"
+            android:key="channelId" />
+
+        <DropDownPreference
+            android:title="Style"
+            android:key="style"
+            android:entries="@array/notificationStyleValue"
+            android:entryValues="@array/notificationStyleValue" />
+
+        <Preference
+            android:title="Send"
+            android:key="send" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="NotificationChannel" >
+        <EditTextPreference
+            android:title="Title"
+            android:key="channelTitle" />
+
+        <EditTextPreference
+            android:title="ID"
+            android:key="channelKey" />
+
+        <DropDownPreference
+            android:title="Importance"
+            android:key="channelImportance"
+            android:entries="@array/notificationImportanceValue"
+            android:entryValues="@array/notificationImportanceValue" />
+
+        <Preference
+            android:title="Create"
+            android:key="create" />
+
+        <Preference
+            android:title="Remove"
+            android:key="remove" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

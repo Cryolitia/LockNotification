@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="notificationStyleValue">
+        <item>Null</item>
+        <item>BigPicture</item>
+        <item>BigText</item>
+        <item>Inbox</item>
+        <item>Messaging</item>
+        <item>Media</item>
+    </string-array>
+    <string-array name="notificationImportanceValue">
+        <item>PRIORITY_MIN</item>
+        <item>PRIORITY_LOW</item>
+        <item>PRIORITY_DEFAULT</item>
+        <item>PRIORITY_HIGH</item>
+    </string-array>
+</resources>

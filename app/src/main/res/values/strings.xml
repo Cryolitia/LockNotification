@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Lock Notification</string>
+    <string name="description" translatable="false">Lock Notification</string>
+    <string name="xposed_not_activated">Xposed not activated</string>
+    <string name="nevolution">Nevolution</string>
+    <string name="already_apply_count">Applied %1$d times</string>
+    <string name="notification_not_allowed">Notification access permission not granted</string>
+    <string name="notification_service_not_connect">Notificationlistenser service not connect</string>
+    <string name="rule">Rule</string>
+    <string name="name">Name</string>
+    <string name="enable">Enable</string>
+    <string name="import_rule">Import</string>
+    <string name="filter">Filter</string>
+    <string name="use_regex">Use regular expressions</string>
+    <string name="package_name">Package name</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="notification_channel">Notification channel</string>
+    <string name="style">Style</string>
+    <string name="action">Action</string>
+    <string name="lock">Lock</string>
+    <string name="add_to_another_channel">Add to another notification channel</string>
+    <string name="channel_name">Channel name</string>
+    <string name="channel_id">Channel ID</string>
+    <string name="importance">Channel importance</string>
+    <string name="lockscreen_visibility">Lockscreen visibility</string>
+    <string name="all_rules">All rules</string>
+    <string name="setting">Setting</string>
+    <string name="force_night_style">Force to use dark style</string>
+    <string name="auto_start_permission">Self-starting permissions</string>
+    <string name="auto_start_permission_summary">If you are using a Chinese ROM or background management software, please allow this software to start and wake up.</string>
+    <string name="recheck_summary">Please reboot your phone after update</string>
+    <string name="recheck">Xposed not activated after update</string>
+    <string name="edxposed_problem">What is EdXposed problem reporting needed</string>
+    <string name="taichi_problem">If users using EdXposed / Xposed, etc. report that this software is working properly but not working on Taichi. It is very likely that there is a problem with Taichi’s adaptation engine</string>
+    <string name="taichi">Taichi</string>
+    <string name="troubleshooting">Troubleshooting</string>
+    <string name="special_thanks">Special thanks</string>
+    <string name="special_thanks_summary">The user interface of the software completely reproduces XposedMusicNotify, thanks to the author of it.\nThanks Lagrio for drawing icons</string>
+    <string name="about">About</string>
+    <string name="singleNeuron">singleNeuron</string>
+    <string name="author">Author</string>
+    <string name="version">Version</string>
+    <string name="contact_author">Contact author</string>
+    <string name="qq_group">QQ group</string>
+    <string name="telegram_channel">Telegram channel / group</string>
+    <string name="github_address">Github</string>
+    <string name="open_source_license">Open source license</string>
+    <string name="showing_notification">Showing notifications</string>
+    <string name="OK">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="only_letters_and_numbers">Should only consist of English letters or numbers</string>
+    <string name="id_should_not_empty">ID should not be empty</string>
+    <string name="channel_id_should_not_empty">Channel ID should not be empty</string>
+    <string name="channel_importance_should_not_empty">Channel imporatnce should not be empty</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="copy1">Copy</string>
+    <string name="ask_delete">Delete?</string>
+    <string name="already_copy_to_clipbroad">Copied to clipboard</string>
+    <string name="clean_all_log">Clear all logs</string>
+    <string name="max_remain">Maximum number of reserved</string>
+    <string name="nevolution_activated">Nevolution activated</string>
+    <string name="nevolution_not_activated">Nevolution not activated</string>
+    <string name="nevolution_not_install">Nevolution not installed</string>
+    <string name="now_showing_count">Currently displaying %1$d notification</string>
+    <string name="notification_allowed">Notification access permission granted</string>
+    <string name="xposedmusicnotify">XposedMusicNotify</string>
+    <string name="send_email">Send E-mail</string>
+    <string name="xposed_activated">Xposed activated</string>
+    <string name="edxposed_not_activated">EdXposed not activated</string>
+    <string name="edxposed_activated">EdXposed activated</string>
+    <string name="taichi_yin_not_activated">Taichi·Yin not activated</string>
+    <string name="taichi_yin_activated">Taichi·Yin activated</string>
+    <string name="taichi_yang_not_activated">Taichi·Yang not activated</string>
+    <string name="taichi_yang_activated">Taichi·Yang activated</string>
+    <string name="notification_listener">LockNotification - Listener</string>
+    <item name="default_fab_id" type="id" />
+    <string-array name="notificationStyle">
+        <item>Big picture</item>
+        <item>Big text</item>
+        <item>Inbox</item>
+        <item>Messaging</item>
+        <item>Media</item>
+    </string-array>
+    <string-array name="notificationStyleValue">
+        <item>BigPicture</item>
+        <item>BigText</item>
+        <item>Inbox</item>
+        <item>Messaging</item>
+        <item>Media</item>
+    </string-array>
+    <string-array name="notificationImportance">
+        <item>High</item>
+        <item>Default</item>
+        <item>Low</item>
+        <item>Min</item>
+    </string-array>
+    <string-array name="notificationImportanceValue">
+        <item>PRIORITY_HIGH</item>
+        <item>PRIORITY_DEFAULT</item>
+        <item>PRIORITY_LOW</item>
+        <item>PRIORITY_MIN</item>
+    </string-array>
+    <string-array name="notificationVisibility">
+        <item>No change</item>
+        <item>Private</item>
+        <item>Secret</item>
+    </string-array>
+    <string-array name="notificationVisibilityValue">
+        <item>VISIBILITY_PUBLIC</item>
+        <item>VISIBILITY_PRIVATE</item>
+        <item>VISIBILITY_SECRET</item>
+    </string-array>
+</resources>

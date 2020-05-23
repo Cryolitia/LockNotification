@@ -1,0 +1,3 @@
+rootProject.name='LockNotification'
+include ':app'
+include ':locknotification_debugtool'

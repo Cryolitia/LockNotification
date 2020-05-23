@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.preference.PreferenceCategory
+        android:key="settings"
+        android:title="@string/setting">
+        <androidx.preference.Preference
+            android:title="@string/rule"
+            android:key="config_setting" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="forceNight"
+            android:title="@string/force_night_style" />
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory
+        android:title="@string/troubleshooting">
+        <androidx.preference.Preference
+            android:title="@string/auto_start_permission"
+            android:summary="@string/auto_start_permission_summary"
+            android:key="autoStart" />
+        <androidx.preference.Preference
+            android:summary="@string/recheck_summary"
+            android:title="@string/recheck" />
+        <androidx.preference.Preference
+            android:key="miuiProblem"
+            android:title="MIUI"
+            app:isPreferenceVisible="false" />
+        <androidx.preference.Preference
+            android:key="edxpProblem"
+            android:title="EdXposed"
+            android:icon="@drawable/edxp_icon"
+            android:summary="@string/edxposed_problem"
+            app:isPreferenceVisible="false" />
+        <androidx.preference.Preference
+            android:key="taichiProblem"
+            android:summary="@string/taichi_problem"
+            android:title="@string/taichi"
+            app:isPreferenceVisible="false" />
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory
+        android:title="@string/about">
+        <androidx.preference.Preference
+            android:icon="@drawable/singleneuron"
+            android:key="author"
+            android:summary="@string/singleNeuron"
+            android:title="@string/author">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/singleNeuron" />
+        </androidx.preference.Preference>
+        <androidx.preference.Preference
+            android:summary="@string/special_thanks_summary"
+            android:key="thanks"
+            android:title="@string/special_thanks" />
+        <androidx.preference.Preference
+            android:key="version"
+            android:title="@string/version" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=cn.nexus6p.QQMusicNotify" />
+        </androidx.preference.Preference>
+        <androidx.preference.Preference
+            android:key="connect"
+            android:icon="@drawable/ic_mail_outline"
+            android:summary="liziyuan0720@gmail.com"
+            android:title="@string/contact_author" />
+        <androidx.preference.Preference
+            android:key="qqqun"
+            android:summary="951343825"
+            android:title="@string/qq_group" />
+        <androidx.preference.Preference
+            android:summary="\@NeuronDevelopChannel"
+            android:icon="@drawable/ic_telegram_logo"
+            android:title="@string/telegram_channel">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/NeuronDevelopChannel" />
+        </androidx.preference.Preference>
+        <androidx.preference.Preference
+            android:icon="@drawable/ic_github"
+            android:key="github"
+            android:summary="https://github.com/singleNeuron/XposedMusicNotify"
+            android:title="@string/github_address">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/singleNeuron/XposedMusicNotify" />
+        </androidx.preference.Preference>
+        <androidx.preference.Preference
+            android:key="openSource"
+            android:title="@string/open_source_license" />
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>
