@@ -65,3 +65,5 @@ keystore.properties
 .settings/
 .settings/org.eclipse.buildship.core.prefs
 .projeck
+*.aab
+app/release/

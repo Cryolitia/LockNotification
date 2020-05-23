@@ -13,6 +13,7 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.Fragment
 import com.oasisfeng.nevo.sdk.NevoDecoratorService
 import me.singleneuron.locknotification.*
@@ -153,21 +154,12 @@ class SettingFragment : Fragment(), OnGotNotificationListener {
     }
 
     private fun isEnabled(): Boolean {
-        val pkgName: String = requireContext().packageName
-        val flat: String =
-            Settings.Secure.getString(requireContext().contentResolver, "enabled_notification_listeners")
-        if (!TextUtils.isEmpty(flat)) {
-            val names = flat.split(":").toTypedArray()
-            for (i in names.indices) {
-                val cn = ComponentName.unflattenFromString(names[i])
-                if (cn != null) {
-                    if (TextUtils.equals(pkgName, cn.packageName)) {
-                        return true
-                    }
-                }
-            }
+        return try {
+            NotificationManagerCompat.getEnabledListenerPackages(requireContext()).contains(BuildConfig.APPLICATION_ID)
+        } catch (e:Exception) {
+            e.printStackTrace()
+            false
         }
-        return false
     }
 
     override fun onPause() {
