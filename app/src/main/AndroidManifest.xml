@@ -29,7 +29,6 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -51,7 +50,6 @@
             android:name=".NevolutionService"
             android:directBootAware="true"
             android:permission="com.oasisfeng.nevo.permission.BIND_DECORATOR_SERVICE"
-            android:process="com.oasisfeng.nevo.decorators"
             android:label="@string/app_name"
             android:description="@string/description" >
             <intent-filter android:priority="0">
