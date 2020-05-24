@@ -64,7 +64,7 @@
     <string name="nevolution_not_activated">女媧石 未啟用</string>
     <string name="nevolution_not_install">女媧石 未安裝</string>
     <string name="now_showing_count">當前正在顯示 %1$d 條通知</string>
-    <string name="notification_allowed">通知權 已授予</string>
+    <string name="notification_allowed">通知存取權 已授予</string>
     <string name="xposedmusicnotify">原生音樂通知</string>
     <string name="send_email">傳送郵件</string>
     <string name="xposed_activated">Xposed 已啟用</string>
