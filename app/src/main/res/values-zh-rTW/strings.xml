@@ -4,7 +4,7 @@
     <string name="xposed_not_activated">Xposed 未啟用</string>
     <string name="nevolution">女媧石</string>
     <string name="already_apply_count">已應用 %1$d 次</string>
-    <string name="notification_not_allowed">通知使用權 未授予</string>
+    <string name="notification_not_allowed">通知存取權 未授予</string>
     <string name="notification_service_not_connect">未連線到通知監聽服務</string>
     <string name="rule">規則</string>
     <string name="name">名稱</string>
@@ -15,13 +15,13 @@
     <string name="package_name">包名</string>
     <string name="title">標題</string>
     <string name="message">內容</string>
-    <string name="notification_channel">通知渠道</string>
+    <string name="notification_channel">通知管道</string>
     <string name="style">風格</string>
     <string name="action">操作</string>
     <string name="lock">鎖定</string>
-    <string name="add_to_another_channel">新增到單獨的通知渠道</string>
-    <string name="channel_name">渠道名稱</string>
-    <string name="channel_id">渠道ID</string>
+    <string name="add_to_another_channel">新增到單獨的通知管道</string>
+    <string name="channel_name">管道名稱</string>
+    <string name="channel_id">管道ID</string>
     <string name="importance">重要性</string>
     <string name="lockscreen_visibility">鎖屏可見性</string>
     <string name="all_rules">所有規則</string>
@@ -36,7 +36,7 @@
     <string name="taichi">太極</string>
     <string name="troubleshooting">故障排除</string>
     <string name="special_thanks">特別感謝</string>
-    <string name="special_thanks_summary">本模組使用者介面完全厚顏無恥的抄襲了原生音樂通知，感謝此模組的作者dalao\n感謝賣動繪製圖標</string>
+    <string name="special_thanks_summary">本模組使用者介面完全厚顏無恥的抄襲了原生音樂通知，感謝此模組的作者dalao\n感謝賣動繪製圖示</string>
     <string name="about">關於</string>
     <string name="singleNeuron">神經元</string>
     <string name="author">作者</string>
@@ -64,7 +64,7 @@
     <string name="nevolution_not_activated">女媧石 未啟用</string>
     <string name="nevolution_not_install">女媧石 未安裝</string>
     <string name="now_showing_count">當前正在顯示 %1$d 條通知</string>
-    <string name="notification_allowed">通知使用權 已授予</string>
+    <string name="notification_allowed">通知權 已授予</string>
     <string name="xposedmusicnotify">原生音樂通知</string>
     <string name="send_email">傳送郵件</string>
     <string name="xposed_activated">Xposed 已啟用</string>
