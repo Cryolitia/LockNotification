@@ -17,13 +17,32 @@ import kotlin.collections.ArrayList
 
 class NevolutionService : NevoDecoratorService() {
 
+    private var tempMap : HashMap<String,ConfigUtil> = HashMap()
+
     override fun apply(evolving: MutableStatusBarNotification?): Boolean {
+        if (tempMap.isNullOrEmpty()) {
+            val jsonString = File(filesDir.absolutePath + File.separator + "config.json").readText()
+            if (jsonString.isBlank()) return false
+            val jsonObject = JsonParser.parseString(jsonString).asJsonObject
+            if (jsonObject.keySet().isNullOrEmpty()) return false
+            tempMap = HashMap<String,ConfigUtil>((jsonObject.size().toFloat()/0.75).toInt()+1)
+            jsonObject.keySet().forEach {
+                try {
+                    val configUtil: ConfigUtil = Gson().fromJson(
+                        jsonObject!!.getAsJsonObject(it),
+                        ConfigUtil::class.java
+                    )
+                    tempMap[it] = configUtil
+                }catch (e:Exception) {
+                    e.printStackTrace()
+                }
+            }
+        }
+        if (tempMap.isNullOrEmpty()) return false
         val notification = evolving!!.notification
-        val configJsonString = File(filesDir.absolutePath + File.separator + "config.json").readText()
-        if (configJsonString.isBlank()) return false
-        val jsonObject = JsonParser.parseString(configJsonString).asJsonObject
-        jsonObject.keySet().forEach {key ->
-            val configUtil : ConfigUtil = Gson().fromJson(jsonObject.getAsJsonObject(key), ConfigUtil::class.java)
+        tempMap.keys.forEach {key ->
+            if (tempMap[key] == null) return@forEach
+            val configUtil: ConfigUtil = tempMap[key]!!
             if (!configUtil.configHit(notification.extras, evolving.packageName,
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) notification.channelId
                     else null)

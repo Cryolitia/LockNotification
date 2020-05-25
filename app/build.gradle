@@ -12,8 +12,8 @@ android {
         applicationId "me.singleneuron.locknotification"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 3
-        versionName "1.01"
+        versionCode 4
+        versionName "1.02"
 
     }
 

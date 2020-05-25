@@ -2,9 +2,9 @@ package me.singleneuron.locknotification.Utils
 
 import android.content.Context
 import android.util.Log
+import com.topjohnwu.superuser.Shell
 import me.singleneuron.locknotification.ContentProvider
 import me.singleneuron.locknotification.SharedPreferences.ContentProviderPreference
-import com.topjohnwu.superuser.Shell
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -28,11 +28,13 @@ class LogUtils {
         }
 
         fun addLogByContentProvider(configName: String, packageName: String, context: Context) {
+            if (packageName.contains("android.ext.services",true)) return
             val string: String = SimpleDateFormat("[yyyy-MM-dd HH:mm:ss] ", Locale.getDefault()).format(Date()) + configName + " apply to " + packageName + "  \n"
             ContentProviderPreference(ContentProvider.CONTENT_PROVIDER_COMMIT, string, context)
         }
 
         fun addLog(string: String, context: Context) {
+            if (string.contains("android.ext.services",true)) return
             val logFile = File(context.filesDir.absolutePath + File.separator + "log.txt")
             if (!logFile.exists()) logFile.createNewFile()
             val tmpFile = File(context.filesDir.absolutePath + File.separator + "log.tmp")
