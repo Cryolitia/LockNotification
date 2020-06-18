@@ -75,6 +75,9 @@
     <string name="taichi_yang_not_activated">太極·陽 未激活</string>
     <string name="taichi_yang_activated">太極·陽 已激活</string>
     <string name="notification_listener">鎖定通知-通知監聽器</string>
+    <string name="replace">在鎖定屏幕上替換通知內容</string>
+    <string name="regex_to_replace">用於替換的正則表達式</string>
+    <string name="replace_to">將其替換爲</string>
     <string-array name="notificationStyle">
         <item>大圖片</item>
         <item>一大段文本</item>

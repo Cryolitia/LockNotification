@@ -57,7 +57,7 @@
             android:title="@string/version" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/store/apps/details?id=cn.nexus6p.QQMusicNotify" />
+                android:data="https://play.google.com/store/apps/details?id=me.singleneuron.locknotification" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
             android:key="connect"
@@ -79,11 +79,11 @@
         <androidx.preference.Preference
             android:icon="@drawable/ic_github"
             android:key="github"
-            android:summary="https://github.com/singleNeuron/XposedMusicNotify"
+            android:summary="https://github.com/singleNeuron/LockNotification"
             android:title="@string/github_address">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://github.com/singleNeuron/XposedMusicNotify" />
+                android:data="https://github.com/singleNeuron/LockNotification" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
             android:key="openSource"

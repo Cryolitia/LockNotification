@@ -38,6 +38,10 @@ public class ConfigUtil {
     public String channelImportance = null;
     public String visibility = null;
 
+    public boolean replace = false;
+    public String toReplace = "";
+    public String replaceTo = "";
+
     @NonNull
     public static ConfigUtil fromJson(@NonNull String json) {
         return new Gson().fromJson(json, ConfigUtil.class);
@@ -186,6 +190,18 @@ public class ConfigUtil {
     private boolean stringNullOrEmpty(String string) {
         if(string==null) return true;
         return string.isEmpty();
+    }
+
+    public Notification replace(Notification notification) {
+        Notification newNotification = notification.clone();
+        String string = getBundleObjectString(notification.extras,NotificationCompat.EXTRA_TEXT);
+        if (string==null) return notification;
+        string = string.replaceAll(toReplace,replaceTo);
+        newNotification.extras.putString(NotificationCompat.EXTRA_TEXT,string);
+        newNotification.visibility = NotificationCompat.VISIBILITY_PUBLIC;
+        notification.publicVersion = newNotification;
+        //Log.d("LockNotification","already replaced");
+        return notification;
     }
 
 }

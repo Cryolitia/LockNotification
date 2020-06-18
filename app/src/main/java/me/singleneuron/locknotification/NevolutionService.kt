@@ -64,6 +64,8 @@ class NevolutionService : NevoDecoratorService() {
             if (configUtil.getVisibility()!=NotificationCompat.VISIBILITY_PUBLIC) {
                 notification.visibility = configUtil.getVisibility()
             }
+            if (configUtil.replace)
+                configUtil.replace(notification)
             notification.extras.putString("LOCK_NOTIFICATION_APPLY",key)
             val string: String = SimpleDateFormat("[yyyy-MM-dd HH:mm:ss] ", Locale.getDefault()).format(Date()) + key + " apply to " + packageName + "  \n"
             LogUtils.addLog(string, this)

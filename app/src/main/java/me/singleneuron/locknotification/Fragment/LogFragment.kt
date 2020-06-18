@@ -8,12 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import com.azhon.suspensionfab.FabAttributes
-import com.azhon.suspensionfab.SuspensionFab
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -73,10 +71,10 @@ class LogFragment : Fragment() {
             when (tag) {
                 1 -> {
                     val snackBar = Snackbar.make(binding.logContent, R.string.clean_all_log, Snackbar.LENGTH_LONG)
-                            .setAction(getText(R.string.OK), View.OnClickListener {
+                            .setAction(getText(R.string.OK)) {
                                 logFile.writeText("")
                                 textView.text = ""
-                            })
+                            }
                     val snackBarView = snackBar.view
                     snackBarView.fitsSystemWindows = false
                     ViewCompat.setOnApplyWindowInsetsListener(snackBarView, null)
@@ -96,7 +94,9 @@ class LogFragment : Fragment() {
                                 val maxLine: Int = Integer.parseInt(editText.text.toString())
                                 sharedPreferences.edit().putInt("logMaxLine", maxLine).apply()
                                 cleanLog(maxLine, requireContext())
-                                textView.text = logFile.readText()
+                                var logList = logFile.readLines()
+                                logList = logList.reversed()
+                                textView.text = logList.joinToString(separator = "\n")
                             }
                             .setNegativeButton(R.string.cancel, null)
                             .create()
@@ -118,7 +118,9 @@ class LogFragment : Fragment() {
         super.onResume()
         val logFile = File(requireActivity().filesDir.absolutePath + File.separator + "log.txt")
         val textView = binding.textView
-        textView.text = logFile.readText()
+        var logList = logFile.readLines()
+        logList = logList.reversed()
+        textView.text = logList.joinToString(separator = "\n")
     }
 
 }

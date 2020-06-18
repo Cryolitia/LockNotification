@@ -1,8 +1,6 @@
 package me.singleneuron.locknotification.Fragment
 
-import android.content.DialogInterface
 import android.os.Bundle
-import android.util.Log
 import android.widget.EditText
 import android.widget.Toast
 import androidx.preference.Preference
@@ -11,13 +9,18 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import me.singleneuron.locknotification.R
 import me.singleneuron.locknotification.Utils.ConfigUtil
 import me.singleneuron.locknotification.Utils.GeneralUtils
+import java.lang.reflect.Field
 import java.util.regex.Pattern
 
 class AddConfigDetailFragment : PreferenceFragmentCompat() {
 
     companion object {
         public var configUtil = ConfigUtil()
-        public val preferenceKey = arrayOf("configName","configKey","enable","useRegex","usePackage","useTitle","useMessage","useChannel","useStyle","lockNotification","throwInAnotherChannel","channelTitle","channelKey","channelImportance","visibility")
+        private val preferenceField: Array<Field> = ConfigUtil::class.java.fields
+        public val preferenceKey = Array(preferenceField.size) {
+            preferenceField[it].name
+        }
+
         public fun newInstance(mConfigUtil: ConfigUtil) : AddConfigDetailFragment {
             val addConfigDetailFragment = AddConfigDetailFragment()
             configUtil = mConfigUtil

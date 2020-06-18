@@ -20,7 +20,7 @@ class LogUtils {
             val tmpFile = File(context.filesDir.absolutePath + File.separator + "log.tmp")
             if (tmpFile.exists()) tmpFile.writeText("")
             tmpFile.writeBytes(logFile.readBytes())
-            val command = "head -" + max + " " + tmpFile.absolutePath + " > " + logFile.absolutePath
+            val command = "tail -n" + max + " " + tmpFile.absolutePath + " > " + logFile.absolutePath
             Log.d("log clean", command)
             val result = Shell.sh(command).exec()
             if (!result.isSuccess) Log.w("clean log", result.err.toString())
@@ -37,12 +37,7 @@ class LogUtils {
             if (string.contains("android.ext.services",true)) return
             val logFile = File(context.filesDir.absolutePath + File.separator + "log.txt")
             if (!logFile.exists()) logFile.createNewFile()
-            val tmpFile = File(context.filesDir.absolutePath + File.separator + "log.tmp")
-            if (tmpFile.exists()) tmpFile.writeText("")
-            tmpFile.writeBytes(logFile.readBytes())
-            logFile.writeText(string)
-            logFile.appendText(tmpFile.readText())
-            tmpFile.delete()
+            logFile.appendText(string)
         }
 
         fun getLineCount(context: Context): Int {

@@ -127,6 +127,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             notices.addNotice(new Notice("libsu", "https://github.com/topjohnwu/libsu", "topjohnwu", new ApacheSoftwareLicense20()));
             notices.addNotice(new Notice("suspension-fab", "https://github.com/userwangjf/MindLock/tree/master/suspension-fab", "Copyright [2016-09-21] [阿钟]", new ApacheSoftwareLicense20()));
             notices.addNotice(new Notice("gson", "https://github.com/google/gson", "Copyright 2008 Google Inc.", new ApacheSoftwareLicense20()));
+            notices.addNotice(new Notice("alcatrazui","https://github.com/Alcatraz323/alcatrazui","Alcatraz323", new ApacheSoftwareLicense20()));
             notices.addNotice(new Notice("audiohq_md2","https://github.com/Alcatraz323/audiohq_md2","Alcatraz323", new MITLicense()));
             notices.addNotice(new Notice("Nevolution sdk","https://github.com/Nevolution/sdk","Copyright (C) 2015 The Nevolution Project", new ApacheSoftwareLicense20()));
             notices.addNotice(new Notice("WeChat Modernized (Nevolution Decorator)","https://github.com/Nevolution/decorator-wechat", "oasisfeng", new ApacheSoftwareLicense20()));

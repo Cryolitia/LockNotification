@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">Lock Notification</string>
     <string name="description" translatable="false">Lock Notification</string>
     <string name="xposed_not_activated">Xposed not activated</string>
@@ -76,6 +76,9 @@
     <string name="taichi_yang_not_activated">Taichi·Yang not activated</string>
     <string name="taichi_yang_activated">Taichi·Yang activated</string>
     <string name="notification_listener">LockNotification - Listener</string>
+    <string name="replace">Replace message on Lockscreen</string>
+    <string name="regex_to_replace">Regular Expression to replace</string>
+    <string name="replace_to">Replace to</string>
     <item name="default_fab_id" type="id" />
     <string-array name="notificationStyle">
         <item>Big picture</item>

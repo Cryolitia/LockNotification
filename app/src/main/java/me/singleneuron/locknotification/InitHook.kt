@@ -107,6 +107,8 @@ class InitHook : IXposedHookLoadPackage {
                             if (configUtil.getVisibility() != NotificationCompat.VISIBILITY_PUBLIC) {
                                 notification.visibility = configUtil.getVisibility()
                             }
+                            if (configUtil.replace)
+                                configUtil.replace(notification)
                             notification.extras.putString("LOCK_NOTIFICATION_APPLY", key)
                             param.result = notification
                             LogUtils.addLogByContentProvider(key, lpparam.packageName, context)

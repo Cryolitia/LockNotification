@@ -18,6 +18,11 @@
             android:key="enable"
             android:defaultValue="true" />
 
+        <androidx.preference.CheckBoxPreference
+            android:title="@string/use_regex"
+            android:key="useRegex"
+            app:defaultValue="false" />
+
         <androidx.preference.Preference
             android:title="@string/import_rule"
             android:key="import" />
@@ -26,11 +31,6 @@
 
     <androidx.preference.PreferenceCategory
         android:title="@string/filter">
-
-        <androidx.preference.CheckBoxPreference
-            android:title="@string/use_regex"
-            android:key="useRegex"
-            app:defaultValue="false" />
 
         <androidx.preference.EditTextPreference
             android:title="@string/package_name"
@@ -89,6 +89,20 @@
             android:key="visibility"
             android:entries="@array/notificationVisibility"
             android:entryValues="@array/notificationVisibilityValue" />
+
+        <androidx.preference.SwitchPreference
+            android:title="@string/replace"
+            android:key="replace" />
+
+        <androidx.preference.EditTextPreference
+            android:title="@string/regex_to_replace"
+            android:key="toReplace"
+            android:dependency="replace" />
+
+        <androidx.preference.EditTextPreference
+            android:title="@string/replace_to"
+            android:key="replaceTo"
+            android:dependency="replace" />
 
     </androidx.preference.PreferenceCategory>
 
