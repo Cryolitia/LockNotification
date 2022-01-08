@@ -67,7 +67,7 @@ class AddConfigDetailFragment : PreferenceFragmentCompat() {
             if (value!=null) preference!!.summary = value.toString()
             preference!!.setOnPreferenceChangeListener { preference1, newValue ->
                 if (it.contains("Key",true)) {
-                    if (!Pattern.matches("^[a-z0-9A-Z]+$",newValue as String)) {
+                    if (!Pattern.matches("^[a-z0-9A-Z_]+$",newValue as String)) {
                         Toast.makeText(requireContext(),preference1.title.toString() + getString(R.string.only_letters_and_numbers),Toast.LENGTH_LONG).show()
                         return@setOnPreferenceChangeListener false
                     }
